@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+
+	<h1>hello</h1>
+
+   <h2>{{ post.name }}</h2>
+  	
+   <img src={{ asset('imgs/myimg.jpg') }} width="200px" height="200px" />
+
+    {% cache cle %}
+
+  	 {{ slow() }}
+
+  	 <h2>{{ post.id }}</h2>
+      
+  {% endcache %}
+
+
+{% endblock %}
